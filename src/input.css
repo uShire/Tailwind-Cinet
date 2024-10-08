@@ -8,8 +8,8 @@
 
 @layer components{
     .header{
-        @apply bg-light;
-         /* fixed w-full z-[999] */
+        @apply bg-light fixed w-full z-[999]
+        md:border-b-[1px] md:border-gray-400 lg:border-b-0 lg:bg-transparent lg:translate-y-10;
     }
     .header .header__wrapper{
         @apply flex items-center justify-between;
@@ -18,7 +18,10 @@
         @apply flex items-center gap-5;
     }
     .header .branding img{
-        @apply w-40;
+        @apply w-40 lg:w-28;
+    }
+    .header .toggle__menu{
+        @apply lg:hidden;
     }
     .header .toggle__menu span:first-child{
         @apply w-[2.5rem] h-[2px] bg-dark block rounded-full transition ease-in duration-500;
@@ -39,13 +42,23 @@
         @apply w-[2.5rem] rotate-[-225deg] -translate-y-2 transition ease-in duration-500;
     }
     .header ul.header__nav{
-        @apply bg-light absolute -left-[100rem] top-16 h-[calc(100vh-64.45px)] w-[250px] pt-8 flex flex-col gap-1 border transition-all;
+        @apply bg-light absolute -left-[100rem] top-16 h-[calc(100vh-64.45px)] w-[250px] pt-8 flex flex-col gap-1 border transition-all
+        lg:bg-transparent lg:static lg:h-fit lg:w-fit lg:pt-0 lg:flex lg:flex-row lg:border-0 lg:gap-5;
     }
     .header ul.header__nav.open{
         @apply left-0 transition-all;
     }
+    .header .header__actions{
+        @apply lg:flex lg:items-center lg:gap-[1rem]
+    }
+    .header ul.header__nav li.nav{
+        @apply relative;
+    }
     .header ul.header__nav li.nav a{
-        @apply flex items-center justify-between px-4 py-3 hover:bg-accent hover:text-light font-semibold text-lg;
+        @apply flex items-center justify-between px-4 py-3 hover:bg-accent hover:text-light font-semibold text-lg
+        lg:text-sm lg:justify-normal lg:gap-2 lg:hover:bg-transparent lg:hover:text-dark
+        lg:after:content-[''] lg:after:w-[70%] lg:after:h-1 lg:hover:after:bg-accent lg:after:block 
+        lg:after:absolute lg:after:bottom-0;
     }
     .header ul.header__nav li.nav a.open{
         @apply bg-accent text-light
@@ -58,7 +71,8 @@
     }
     .header ul.header__nav li.nav:hover a span,
     .header ul.header__nav li.nav:hover a i{
-        @apply text-light;
+        @apply text-light
+        lg:bg-transparent lg:text-dark;
     }
     .header ul.header__sub{
         @apply max-h-[0rem] overflow-hidden transition-all;
@@ -71,5 +85,14 @@
     }
     .header ul.header__sub li{
         @apply mt-1 hover:bg-accent hover:text-light pl-5
+        lg:pl-0;
     }
+
+
+
+/* BANNER */
+ .banner{
+    @apply h-[80vh] bg-primary 
+    md:bg-light md:bg-banner-desk md:bg-cover md:bg-no-repeat md:bg-center
+ }
 }
