@@ -769,6 +769,14 @@ video {
   position: relative;
 }
 
+@media (min-width: 1024px) {
+  .header ul.header__nav li.nav:hover ul.header__sub {
+    --tw-translate-y: 1.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    opacity: 1;
+  }
+}
+
 .header ul.header__nav li.nav a {
   display: flex;
   align-items: center;
@@ -865,6 +873,24 @@ video {
   transition-duration: 150ms;
 }
 
+@media (min-width: 1024px) {
+  .header ul.header__sub {
+    position: absolute;
+    max-height: 50rem;
+    width: 15rem;
+    --tw-translate-y: 5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    opacity: 0;
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}
+
 .header ul.header__sub.open {
   max-height: 50rem;
   transition-property: all;
@@ -884,6 +910,13 @@ video {
   font-weight: 200 !important;
 }
 
+@media (min-width: 1024px) {
+  .header ul.header__sub li a:hover {
+    --tw-text-opacity: 1;
+    color: rgb(255 193 57 / var(--tw-text-opacity));
+  }
+}
+
 .header ul.header__sub li {
   margin-top: 0.25rem;
   padding-left: 1.25rem;
@@ -898,7 +931,17 @@ video {
 
 @media (min-width: 1024px) {
   .header ul.header__sub li {
-    padding-left: 0px;
+    border-bottom-width: 1px;
+  }
+
+  .header ul.header__sub li:hover {
+    background-color: transparent;
+  }
+
+  .header ul.header__sub li:hover::after {
+    content: var(--tw-content) !important;
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
   }
 }
 

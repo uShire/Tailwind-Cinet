@@ -54,6 +54,10 @@
     .header ul.header__nav li.nav{
         @apply relative;
     }
+    .header ul.header__nav li.nav:hover ul.header__sub{
+        @apply lg:translate-y-5 lg:opacity-100
+    }
+
     .header ul.header__nav li.nav a{
         @apply flex items-center justify-between px-4 py-3 hover:bg-accent hover:text-light font-semibold text-lg
         lg:text-sm lg:justify-normal lg:gap-2 lg:hover:bg-transparent lg:hover:text-dark
@@ -75,17 +79,20 @@
         lg:bg-transparent lg:text-dark;
     }
     .header ul.header__sub{
-        @apply max-h-[0rem] overflow-hidden transition-all;
+        @apply max-h-[0rem] overflow-hidden transition-all
+        lg:max-h-[50rem] lg:bg-light lg:absolute lg:translate-y-[5rem] lg:opacity-0 lg:shadow-2xl
+        lg:w-[15rem] lg:px-3;
     }
     .header ul.header__sub.open{
         @apply  max-h-[50rem] transition-all;
     }
     .header ul.header__sub li a{
-        @apply flex items-center justify-between px-4 py-3 !text-[.9rem] !font-extralight ;
+        @apply flex items-center justify-between px-4 py-3 !text-[.9rem] !font-extralight 
+        lg:hover:text-accent;
     }
     .header ul.header__sub li{
         @apply mt-1 hover:bg-accent hover:text-light pl-5
-        lg:pl-0;
+         lg:border-b-[1px] lg:hover:bg-transparent lg:hover:after:!bg-light;
     }
 
 
