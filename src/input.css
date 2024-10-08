@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply mx-auto max-w-[75rem] p-2;
+}
+
+@layer components{
+    .header{
+        @apply bg-light;
+         /* fixed w-full z-[999] */
+    }
+    .header .header__wrapper{
+        @apply flex items-center justify-between;
+    }
+    .header .branding{
+        @apply flex items-center gap-5;
+    }
+    .header .branding img{
+        @apply w-40;
+    }
+    .header .toggle__menu span:first-child{
+        @apply w-[2.5rem] h-[2px] bg-dark block rounded-full transition ease-in duration-500;
+    }
+    .header .toggle__menu span:nth-child(2){
+        @apply w-[2rem] h-[2px] bg-dark block rounded-full my-2 transition ease-in duration-500;
+    }
+    .header .toggle__menu span:last-child{
+        @apply w-[1.5rem] h-[2px] bg-dark block rounded-full transition ease-in duration-500;
+    }
+    .header .toggle__menu.open span:first-child{
+        @apply w-[2.5rem] rotate-[225deg] translate-y-3 transition ease-in duration-500;
+    }
+    .header .toggle__menu.open span:nth-child(2){
+        @apply opacity-0;
+    }
+    .header .toggle__menu.open span:last-child{
+        @apply w-[2.5rem] rotate-[-225deg] -translate-y-2 transition ease-in duration-500;
+    }
+    .header ul.header__nav{
+        @apply bg-light absolute -left-[100rem] top-16 h-[calc(100vh-64.45px)] w-[250px] pt-8 flex flex-col gap-1 border transition-all;
+    }
+    .header ul.header__nav.open{
+        @apply left-0 transition-all;
+    }
+    .header ul.header__nav li.nav a{
+        @apply flex items-center justify-between px-4 py-3 hover:bg-accent hover:text-light font-semibold text-lg;
+    }
+    .header ul.header__nav li.nav a.open{
+        @apply bg-accent text-light
+    }
+    .header ul.header__nav li.nav a i{
+        @apply transition-all text-[.5rem]
+    }
+    .header ul.header__nav li.nav a i.open{
+        @apply rotate-180 transition-all
+    }
+    .header ul.header__nav li.nav:hover a span,
+    .header ul.header__nav li.nav:hover a i{
+        @apply text-light;
+    }
+    .header ul.header__sub{
+        @apply max-h-[0rem] overflow-hidden transition-all;
+    }
+    .header ul.header__sub.open{
+        @apply  max-h-[50rem] transition-all;
+    }
+    .header ul.header__sub li a{
+        @apply flex items-center justify-between px-4 py-3 !text-[.9rem] !font-extralight ;
+    }
+    .header ul.header__sub li{
+        @apply mt-1 hover:bg-accent hover:text-light pl-5
+    }
+}
