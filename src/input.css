@@ -58,20 +58,21 @@
         @apply lg:translate-y-5 lg:opacity-100
     }
 
-    .header ul.header__nav li.nav a{
+    .header ul.header__nav li.nav a.navA{
         @apply flex items-center justify-between px-4 py-3 hover:bg-accent hover:text-light font-semibold text-lg
         lg:text-sm lg:justify-normal lg:gap-2 lg:hover:bg-transparent lg:hover:text-dark
         lg:after:content-[''] lg:after:w-[70%] lg:after:h-1 lg:hover:after:bg-accent lg:after:block 
-        lg:after:absolute lg:after:bottom-0;
+        lg:after:absolute lg:after:bottom-0
+        ;
     }
-    .header ul.header__nav li.nav a.open{
-        @apply bg-accent text-light
+    .header ul.header__nav li.nav a.navA.open{
+        @apply bg-accent text-light lg:bg-transparent lg:text-dark;
     }
     .header ul.header__nav li.nav a i{
         @apply transition-all text-[.5rem]
     }
     .header ul.header__nav li.nav a i.open{
-        @apply rotate-180 transition-all
+        @apply rotate-180 transition-all lg:rotate-0
     }
     .header ul.header__nav li.nav:hover a span,
     .header ul.header__nav li.nav:hover a i{
@@ -92,8 +93,9 @@
     }
     .header ul.header__sub li{
         @apply mt-1 hover:bg-accent hover:text-light pl-5
-         lg:border-b-[1px] lg:hover:bg-transparent lg:hover:after:!bg-light;
+         lg:border-b-[1px] lg:hover:bg-transparent lg:hover:after:bg-light;
     }
+   
 
 
 
