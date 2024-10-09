@@ -101,7 +101,63 @@
 
 /* BANNER */
  .banner{
-    @apply h-[80vh] bg-primary 
-    md:bg-light md:bg-banner-desk md:bg-cover md:bg-no-repeat md:bg-center
+    @apply h-[98vh] bg-primary relative
+   md:h-[80vh] lg:h-[90vh] md:bg-light md:bg-banner-desk md:bg-cover md:bg-no-repeat md:bg-center
+ }
+ .banner .tns-nav{
+    @apply  translate-y-[4800%] flex justify-center gap-10
+    md:translate-y-[3000%] lg:translate-y-[3800%]
+ }
+ .banner .tns-nav button{
+    @apply bg-gray-600 p-2 rounded-full hover:bg-accent
+ }
+ .banner .tns-nav button.tns-nav-active{
+    @apply bg-accent
+ }
+ .banner .tns-controls{
+    @apply  lg:translate-y-[500%] lg:flex lg:justify-between lg:absolute lg:left-0 lg:w-[90%] lg:translate-x-[5%] lg:z-[100] 
+ }
+ .banner .tns-controls button{
+    @apply 2xl:bg-light 2xl:shadow-[0_10px_30px_#2b2b2b] 2xl:px-5 2xl:py-3 2xl:rounded-full
+ }
+ .banner .banner__item img{
+    @apply w-[20rem] mx-auto mb-10 md:order-2
+    lg:w-[25rem]
+ }
+ .banner .banner__item{
+    @apply px-16 md:px-4 md:!inline-grid md:!grid-cols-2 md:gap-[10rem] md:items-center;
+ }
+ .banner .banner__item h1{
+    @apply text-light text-[2.2rem] font-bold text-center my-4
+    lg:text-7xl
+ }
+ .banner .banner__item h4{
+    @apply text-center
+ }
+ .banner .banner__item h4 span{
+    @apply text-light text-xs font-semibold px-2 
+ }
+ .banner .banner__item h4 span:nth-child(2){
+    @apply border-r-2 border-l-2
+ }
+ .banner .banner__item p {
+    @apply text-light text-center mb-4
+ }
+ .banner .banner__item .banner__btn{
+    @apply py-5
+ }
+ .banner .banner__item .banner__btn a{
+    @apply flex items-center  gap-2 relative w-fit mx-auto px-5
+    before:content-[''] before:w-14 before:h-14 before:bg-accent before:block before:rounded-full
+    before:absolute before:-left-1 before:transition-all hover:before:w-full hover:before:transition-all 
+ }
+ .banner .banner__item .banner__btn a span{
+    @apply text-light font-semibold relative 
+ }
+ .banner .banner__item .banner__btn a i{
+    @apply text-light text-[.5rem] opacity-0 relative transition-all
+ }
+ .banner .banner__item .banner__btn a:hover i{
+    @apply opacity-100 transition-all
  }
 }

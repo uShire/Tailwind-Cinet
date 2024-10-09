@@ -6,6 +6,7 @@
     <title>Home -Cinet</title>
     <link rel="stylesheet" href="/src/output.css">
     <script src="https://kit.fontawesome.com/a6726e13c6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 </head>
 <body>
  
@@ -46,12 +47,75 @@
         </div>
     </header>
 
-    <section class="banner">
+    <section class="banner pt-[5rem] md:pt-[10rem]">
         <div class="container">
-            <div class="banner__wrapper"></div>
+            <div class="banner__wrapper">
+                <div class="banner__item">
+                    <img src="/dist/img/banner-nun.jpg" alt="">
+                    <div class="banner__text">
+                        <h4>
+                            <span>USA</span>
+                            <span>SEP 30, 2021</span>
+                            <span>IMDB: 5.3/10</span>
+                        </h4>
+                        <h1>The Nun</h1>
+                        <p>A priest with a haunted past and a novice on the threshold of her final vows are sent by the Vatican to investigate the death of a young nun in Romania and confront a malevolent force.</p>
+                        <div class="banner__btn">
+                            <a href=""><i class="fa-solid fa-play"></i><span>WATCH NOW</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner__item">
+                    <img src="/dist/img/banner-spider.jpg" alt="">
+                    <div class="banner__text">
+                        <h4>
+                            <span>USA</span>
+                            <span>SEP 29, 2021</span>
+                            <span>IMDB: 3.8/10</span>
+                        </h4>
+                        <h1>Escape Plan 2: Hades</h1>
+                        <p>Years after he fought his way out of an inescapable prison, Ray Breslin has organized a new top-notch security force. But when his team member goes missing, Breslin returns to the hell he escaped from.</p>
+                        <div class="banner__btn">
+                            <a href=""><i class="fa-solid fa-play"></i><span>WATCH NOW</span></a>
+                        </div>
+                    </div>
+                </div>  
+                <div class="banner__item">
+                    <img src="/dist/img/banner-ready.jpg" alt="">
+                    <div class="banner__text">
+                        <h4>
+                            <span>USA</span>
+                            <span>MAR 29, 2021</span>
+                            <span>IMDB: 7.5/10</span>
+                        </h4>
+                        <h1>Ready Player One</h1>
+                        <p>When the creator of a virtual reality called the OASIS dies, he makes a posthumous challenge to all OASIS users to find his Easter Egg, which will give the finder his fortune and control of his world.</p>
+                        <div class="banner__btn">
+                            <a href=""><i class="fa-solid fa-play"></i><span>WATCH NOW</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 <script src="/dist/js/toggleMenu.js"></script>
 <script src="/dist/js/headerDropDown.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script type="module">
+    // import {tns} from './src/tiny-slider.js';
+  
+    var slider = tns({
+      container: '.banner__wrapper',
+      items: 1,
+      slideBy: 'page',
+      autoplay: false,
+      controlsText:["",""],
+      responsive:{
+          1536:{
+            controlsText:['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
+          }
+        }
+    });
+    </script>
 </body>
 </html>

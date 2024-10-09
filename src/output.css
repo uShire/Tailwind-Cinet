@@ -963,13 +963,15 @@ video {
 /* BANNER */
 
 .banner {
-  height: 80vh;
+  position: relative;
+  height: 98vh;
   --tw-bg-opacity: 1;
   background-color: rgb(0 94 127 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
   .banner {
+    height: 80vh;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     background-image: url('/dist/img/cinet-banner-desktop.svg');
@@ -977,6 +979,229 @@ video {
     background-position: center;
     background-repeat: no-repeat;
   }
+}
+
+@media (min-width: 1024px) {
+  .banner {
+    height: 90vh;
+  }
+}
+
+.banner .tns-nav {
+  display: flex;
+  --tw-translate-y: 4800%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .banner .tns-nav {
+    --tw-translate-y: 3000%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner .tns-nav {
+    --tw-translate-y: 3800%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+.banner .tns-nav button {
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+}
+
+.banner .tns-nav button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 193 57 / var(--tw-bg-opacity));
+}
+
+.banner .tns-nav button.tns-nav-active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 193 57 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 1024px) {
+  .banner .tns-controls {
+    position: absolute;
+    left: 0px;
+    z-index: 100;
+    display: flex;
+    width: 90%;
+    --tw-translate-y: 500%;
+    --tw-translate-x: 5%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1536px) {
+  .banner .tns-controls button {
+    border-radius: 9999px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    --tw-shadow: 0 10px 30px #2b2b2b;
+    --tw-shadow-colored: 0 10px 30px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}
+
+.banner .banner__item img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  width: 20rem;
+}
+
+@media (min-width: 768px) {
+  .banner .banner__item img {
+    order: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner .banner__item img {
+    width: 25rem;
+  }
+}
+
+.banner .banner__item {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+@media (min-width: 768px) {
+  .banner .banner__item {
+    display: inline-grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: center;
+    gap: 10rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.banner .banner__item h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .banner .banner__item h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+
+.banner .banner__item h4 {
+  text-align: center;
+}
+
+.banner .banner__item h4 span {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.banner .banner__item h4 span:nth-child(2) {
+  border-right-width: 2px;
+  border-left-width: 2px;
+}
+
+.banner .banner__item p {
+  margin-bottom: 1rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.banner .banner__item .banner__btn {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.banner .banner__item .banner__btn a {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.banner .banner__item .banner__btn a::before {
+  position: absolute;
+  left: -0.25rem;
+  display: block;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 193 57 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.banner .banner__item .banner__btn a:hover::before {
+  width: 100%;
+  content: var(--tw-content);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.banner .banner__item .banner__btn a span {
+  position: relative;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.banner .banner__item .banner__btn a i {
+  position: relative;
+  font-size: .5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.banner .banner__item .banner__btn a:hover i {
+  opacity: 1;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.pt-\[5rem\] {
+  padding-top: 5rem;
 }
 
 .text-lg {
@@ -989,4 +1214,10 @@ video {
   margin-right: auto;
   max-width: 75rem;
   padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .md\:pt-\[10rem\] {
+    padding-top: 10rem;
+  }
 }
