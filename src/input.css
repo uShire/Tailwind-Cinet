@@ -55,7 +55,7 @@
         @apply relative;
     }
     .header ul.header__nav li.nav:hover ul.header__sub{
-        @apply lg:translate-y-5 lg:opacity-100
+        @apply lg:translate-y-5 lg:opacity-100 lg:h-fit
     }
 
     .header ul.header__nav li.nav a.navA{
@@ -81,7 +81,7 @@
     }
     .header ul.header__sub{
         @apply max-h-[0rem] overflow-hidden transition-all
-        lg:max-h-[50rem] lg:bg-light lg:absolute lg:translate-y-[5rem] lg:opacity-0 lg:shadow-2xl
+        lg:max-h-[50rem] lg:bg-light lg:absolute lg:translate-y-[5rem] lg:opacity-0 lg:h-0 lg:shadow-2xl
         lg:w-[15rem] lg:px-3;
     }
     .header ul.header__sub.open{
